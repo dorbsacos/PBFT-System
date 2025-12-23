@@ -1,4 +1,4 @@
-# Linear-PBFT (Collector-Based PBFT)
+# Linear-PBFT
 
 A Python implementation of **PBFT-style Byzantine Fault Tolerance** for a simple replicated banking datastore (client balances + transfers). This project implements the **normal-case PBFT phases** (Pre-Prepare → Prepare → Commit → Execute/Reply) using a **collector pattern** (replicas send Prepare/Commit to the primary, which then re-broadcasts a quorum certificate), achieving **O(n)** communication per phase instead of PBFT’s classic O(n²).
 
